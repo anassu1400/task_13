@@ -24,5 +24,5 @@ class Item(models.Model):
 
 
 class FavoriteRestaurant(models.Model):
-    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='favorited')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
